@@ -1,0 +1,43 @@
+slider:
+  use: "@organisms/slider/slider.twig"
+  label: Slider
+  extends:
+  icon_path: ws-assets://images/slider-icon.svg
+  description: Javascript slider with splide (https://splidejs.com/).
+    Change the slider behavior in slider.behavior.js.
+  fields:
+    items:
+      type: pattern
+      label: Slider items
+      multi_value_type: items
+      preview:
+        - id: banner
+          position: bottom_left
+        - id: banner
+          position: bottom_left
+        - id: banner
+          position: bottom_left
+        - id: banner
+          position: bottom_left
+        - id: banner
+          position: bottom_left
+  settings:
+    slides_per_view:
+      type: select
+      label: Slides per view
+      options:
+        1: 1
+        2: 2
+        3: 3
+      default_value: 1
+    autoplay:
+      type: boolean
+      label: Autoplay
+      default_value: false
+  libraries:
+    - pattern_slider:
+        js:
+          ../behaviors/slider.js: {}
+        css:
+          component:
+            ../slider.css: {}

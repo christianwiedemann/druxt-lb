@@ -1,0 +1,118 @@
+menu:
+  use: "@molecules/menu/menu.twig"
+  label: Menu
+  description: Primary and footer menu component.
+  fields:
+    items:
+      type: object
+      label: Items
+  variants:
+    primary:
+      label: Primary
+      fields:
+        items:
+          1:
+            title: Galerie
+            url: "#"
+            in_active_trail: true
+            below:
+              10:
+                title: Kollektionen
+                url: '#'
+              11:
+                title: Shop
+                url: '#'
+              12:
+                title: Standorte
+                url: '#'
+                below:
+                  100:
+                    title: Menu 1
+                    url: '#'
+                  101:
+                    title: Menu 2
+                    url: '#'
+                  102:
+                    title: Menu 3
+                    url: '#'
+                  103:
+                    title: Menu 4
+                    url: '#'
+                  104:
+                    title: Menu 5
+                    url: '#'
+                  105:
+                    title: Menu 6
+                    url: '#'
+                  106:
+                    title: Menu 7
+                    url: '#'
+                  107:
+                    title: Menu 8
+                    url: '#'
+                  108:
+                    title: Menu 9
+                    url: '#'
+                  109:
+                    title: Menu 10
+                    url: '#'
+                  110:
+                    title: Menu 11
+                    url: '#'
+                  111:
+                    title: Menu 12
+                    url: '#'
+                  112:
+                    title: Menu 13
+                    url: '#'
+                  113:
+                    title: Menu 14
+                    url: '#'
+                  114:
+                    title: Menu 15
+                    url: '#'
+                  115:
+                    title: Menu 16
+                    url: '#'
+          2:
+            title: Kollektionen
+            url: "#"
+          3:
+            title: Shop
+            url: "#"
+          4:
+            title: Kontakt
+            url: "#"
+    footer:
+      label: Footer
+      description: The footer menu.
+      fields:
+        items:
+          - title: Column 1
+            url: "#"
+            below:
+              10:
+                title: Link 1
+                url: '#'
+              11:
+                title: Link 2
+                url: '#'
+          - title: Column 2
+            url: "#"
+            below:
+              10:
+                title: Link 3
+                url: '#'
+              11:
+                title: Link 4
+                url: '#'
+          - title: Column 3
+            url: "#"
+            below:
+              10:
+                title: Link 5
+                url: '#'
+              11:
+                title: Link 6
+                url: '#'
+  visibility: storybook

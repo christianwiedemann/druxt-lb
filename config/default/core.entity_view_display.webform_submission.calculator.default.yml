@@ -1,0 +1,12 @@
+uuid: 821aaa8d-433d-4c96-a796-6519fc85f298
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.calculator
+id: webform_submission.calculator.default
+targetEntityType: webform_submission
+bundle: calculator
+mode: default
+content: {  }
+hidden: {  }

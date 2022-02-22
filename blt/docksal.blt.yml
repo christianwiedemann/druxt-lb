@@ -1,0 +1,6 @@
+git:
+  hooks:
+    pre-commit: ${repo.root}/blt/git-hooks
+    pre-push: ${repo.root}/blt/git-hooks
+    commit-msg: ${repo.root}/blt/git-hooks
+

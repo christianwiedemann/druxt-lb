@@ -1,0 +1,24 @@
+# Define Wingsuit theme's library CSS and JS assets along with dependencies
+core:
+  css:
+    theme:
+      ws-assets://tokens.css:
+        preprocess: true
+      ws-assets://image.css:
+        preprocess: true
+      ws-assets://menu-primary.css:
+        preprocess: true
+
+  js:
+    ws-assets://vendors/alpine.js:
+      preprocess: true
+    ws-assets://vendors/vue.js:
+      preprocess: true
+    ws-assets://behaviors/menu-primary.js:
+      preprocess: true
+
+  # see all in Drupal's `core/core.libraries.yml`
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - drimage/drimage

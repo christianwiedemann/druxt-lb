@@ -1,0 +1,16 @@
+{# Include this template inside the page.html.twig in drupal. #}
+
+{% block header %}
+  <di class="pt-7"></div>
+{% endblock header %}
+
+{{ highlighted }}
+
+<main class="main-content flex-1">
+  {% block main %}
+    <p>Main content</p>
+  {% endblock %}
+</main>
+
+{% block footer %}
+{% endblock footer %}

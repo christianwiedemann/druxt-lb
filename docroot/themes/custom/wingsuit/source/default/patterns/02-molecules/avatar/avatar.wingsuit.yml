@@ -1,0 +1,63 @@
+avatar:
+  use: "@molecules/avatar/avatar.twig"
+  label: Avatar
+  icon_path: ws-assets://images/avatar-icon.svg
+  allow_variant_expose: true
+  description: "An avatar represent a user, and displays the profile picture."
+  fields:
+    text:
+      type: text
+      label: Text
+      description: A short description of the avatar.
+      preview:
+        faker: lorem.paragraph
+    full_name:
+      type: text
+      label: Full name
+      description: The full name of the profile.
+      preview:
+        faker: name.findName
+    button:
+      type: pattern
+      label: Button
+      description: Button with link to profile detail page.
+      preview:
+        id: button
+        variant: default
+        settings:
+          expanded: true
+  settings:
+    image:
+      type: media_library
+      label: Image
+      description: The profile picture.
+      view_mode: 1x1
+      allow_expose: true
+      preview:
+        id: placeholder
+        variant: image
+        settings:
+          style: responsive_1_1_400w
+    text_align:
+      type: select
+      label: Text align
+      description: Align the text of the avatar.
+      options:
+        left: Left
+        center: Center
+
+  variants:
+    default:
+      label: Default
+      description: Show
+    horizontal:
+      label: Horizontal
+      settings:
+        image:
+          id: placeholder
+          variant: background
+          definition:
+            view_mode: background
+          settings:
+            style: responsive_1_3_200w
+

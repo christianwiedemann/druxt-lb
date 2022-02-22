@@ -1,0 +1,77 @@
+grid:
+  use: "@organisms/grid/grid.twig"
+  label: Grid
+  description:
+    "A flexible mobile-first flexbox grid pattern, ensuring consistency across layouts."
+  fields:
+    cells:
+      type: object
+      label: Cells
+      description: The cells of the grid.
+      preview:
+        - "<div class='w-full h-40 bg-gray-900'></div>"
+        - "<div class='w-full h-40 bg-gray-900'></div>"
+        - "<div class='w-full h-40 bg-gray-900'></div>"
+        - "<div class='w-full h-40 bg-gray-900'></div>"
+        - "<div class='w-full h-40 bg-gray-900'></div>"
+        - "<div class='w-full h-40 bg-gray-900'></div>"
+        - "<div class='w-full h-40 bg-gray-900'></div>"
+        - "<div class='w-full h-40 bg-gray-900'></div>"
+  settings:
+    equal_height:
+      type: boolean
+      label: Equal height
+      weight: 20
+    gutter:
+      type: select
+      label: Gutter
+      required: true
+      default_value: default
+      description: The gutter between the cells.
+      options:
+        none: None
+        default: Default
+        large: Large
+    columns:
+      type: select
+      label: Columns
+      description: The number of grid columns
+      required: true
+      preview: 4
+      options:
+        1: One column
+        2: Two columns
+        3: Three columns
+        4: Four columns
+        5: Five columns
+    flip_mobile:
+      type: boolean
+      label: Flip on mobile
+      description: Flip columns order on mobile. Useful to display right column first (top) on mobile devices.
+    vertical_center:
+      type: boolean
+      label: Vertical Center
+
+  configuration:
+    columns:
+      1:
+        equal: 'grid-cols-1'
+      2:
+        equal: 'grid-cols-1 lg:grid-cols-2'
+        '66x33': 'grid-cols-1 lg:grid-cols-66/33'
+        '33x66': 'grid-cols-1 lg:grid-cols-33/66'
+        '75x25': 'grid-cols-1 md:grid-cols-66/33 lg:grid-cols-75/25'
+        '25x75': 'grid-cols-1 md:grid-cols-33/66 lg:grid-cols-25/75'
+      3:
+        equal: 'grid-cols-1 lg:grid-cols-3'
+        instagram: 'grid-cols-1 md:grid-cols-4/5/3 grid-instagram'
+        '25x50x25': 'grid-cols-1 lg:grid-cols-25/50/25'
+        '25x25x50': 'grid-cols-1 lg:grid-cols-25/25/50'
+      4:
+        equal: 'grid-cols-2 lg:grid-cols-4'
+      5:
+        equal: 'grid-cols-1 lg:grid-cols-5'
+    gutter:
+      none: ''
+      default: 'gap-4 md:gap-5 lg:gap-7'
+      large: 'gap-10 lg:gap-18'

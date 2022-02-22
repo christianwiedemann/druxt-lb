@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "dev:storybook": "nuxt storybook",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "resolutions": {
+    "postcss-preset-env": "7.0.1"
+  },
+  "dependencies": {
+    "@bit/wingsuit.wingsuit-vue.button": "^0.0.5",
+    "@bit/wingsuit.wingsuit-vue.card": "^0.0.5",
+    "@bit/wingsuit.wingsuit-vue.container": "^0.0.5",
+    "@bit/wingsuit.wingsuit-vue.grid": "^0.0.5",
+    "@bit/wingsuit.wingsuit-vue.hero": "^0.0.5",
+    "@bit/wingsuit.wingsuit-vue.richtext": "^0.0.5",
+    "@nuxtjs/composition-api": "^0.31.0",
+    "@nuxtjs/storybook": "^4.2.0",
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "core-js": "3.18.3",
+    "druxt-site": "^0.10.1",
+    "faker": "^5.5.3",
+    "nuxt": "2.15.8"
+  },
+  "devDependencies": {
+    "@nuxt/types": "~2.15.0",
+    "opn": "6.0.0"
+  }
+}

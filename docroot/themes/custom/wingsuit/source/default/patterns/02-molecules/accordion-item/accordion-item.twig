@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * accordion-item
+ *
+ * See accordion-item.wingsuit.yaml for documentation.
+ */
+#}
+
+{# Template #}
+<div class="relative border-b border-gray-200" x-data="{selected: false}">
+  <button type="button" class="w-full py-6 text-left" @click="selected !== true ? selected = true : selected = false">
+    <div class="flex items-center justify-between">
+      <span class="font-bold">{{ label }}</span>
+      <div x-cloak :class="{ 'hidden' : selected == true }" >
+        {% include "@atoms/svg/_svg--icon.twig" with {
+          icon: 'plus',
+          size: 'small',
+        } only %}
+      </div>
+      <div x-cloak :class="{ 'hidden' : selected == false }">
+        {% include "@atoms/svg/_svg--icon.twig" with {
+          icon: 'minus',
+          size: 'small',
+        } only %}
+      </div>
+    </div>
+  </button>
+  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1"
+       x-bind:style="selected == true ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+    <div class="py-4">
+      {{ content }}
+    </div>
+  </div>
+</div>

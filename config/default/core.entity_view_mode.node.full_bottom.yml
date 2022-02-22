@@ -1,0 +1,10 @@
+uuid: aa9f3053-6b5e-403b-9c78-9ef46af8171d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_bottom
+label: 'Full bottom'
+targetEntityType: node
+cache: true
